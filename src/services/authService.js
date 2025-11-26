@@ -13,7 +13,7 @@ export const registerUser = async (userData) => {
 // Crear usuario anónimo
 export const createAnonymousUser = async () => {
   try {
-    const response = await connection_to_backend.post('/anonymous');
+    const response = await connection_to_backend.post('/anonymous',{});
     return response.data;
   } catch (error) {
     throw error.response?.data || error;
